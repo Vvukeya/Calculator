@@ -40,7 +40,24 @@
             <button class="btn equals" onclick="calculateResult()">=</button>
         </div>
     </div>
+    <footer>
+        <script>
+            var currentYear = new Date().getFullYear();
+            document.write("© " + currentYear + " Vutivi Vukeya. All Rights Reserved.<br>");
 
+            var lastModified = new Date(document.lastModified);
+            var formattedTime = lastModified.toLocaleTimeString('en-US', {
+                hour12: false,
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            var formattedDate = lastModified.toDateString();
+            document.write("Last modified: " + formattedTime + " on " + formattedDate + "<br>");
+
+            document.write("Powered by Vutivi Vukeya | Licensed under MIT License");
+        </script>
+    </footer>
 </body>
 
 </html>
